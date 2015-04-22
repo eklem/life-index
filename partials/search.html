@@ -1,22 +1,25 @@
 <div ng-controller="searchCtrl">
 
-  <div ng-repeat="(facetname, facet) in norch.facets">
-    <div class="" ng-if="facetname == 'type'">
-      <div class="btn-group" role="group" aria-label="...">
-        <a href="{{facety.url}}"
-           ng-repeat="facety in facet" class="btn btn-primary">
-          <i class="demo-icon icon-{{facety.label}}"></i> {{facety.count}}
-        </a>
-      </div>
-    </div>
-  </div>
-  <div ng-repeat="(facetname, facet) in norch.facets">
-    <div class="" ng-if="facetname != 'type'">
-        <b style="margin-left:-27px" class="panel-title"><i class="demo-icon icon-{{facetname}}"></i> </b>
+  <div class="facets">
+    <div ng-repeat="(facetname, facet) in norch.facets">
+      <div class="" ng-if="facetname == 'type'">
         <div class="btn-group" role="group" aria-label="...">
           <a href="{{facety.url}}"
-             ng-repeat="facety in facet" class="btn btn-primary btn-xs">{{facety.label}} {{facety.count}}</a>
+             ng-repeat="facety in facet" class="btn btn-primary">
+            <i class="demo-icon icon-{{facety.label}}"></i> <span class="count">{{facety.count}}</span>
+          </a>
         </div>
+      </div>
+    </div>
+    <div ng-repeat="(facetname, facet) in norch.facets">
+      <div class="" ng-if="facetname != 'type'">
+          <b class="panel-title"><i class="demo-icon icon-{{facetname}}"></i> </b>
+          <div class="btn-group" role="group" aria-label="...">
+            <a href="{{facety.url}}"
+               ng-repeat="facety in facet" class="btn btn-primary btn-xs">{{facety.label}} <span class="count">{{facety.count}}</span>
+            </a>
+          </div>
+      </div>
     </div>
   </div>
 

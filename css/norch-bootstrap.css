@@ -1,9 +1,26 @@
 html {overflow: -moz-scrollbars-vertical; overflow: scroll;}
+body {background:#ccc;}
+h2 {color:#000;}
+
+b.panel-title {margin-left:-27px;}
 #tab-content-id {margin-top: 30px}
+
 
 /*dirty hack to disable TOC links in HTMLed README.md*/
 .ng-binding li a {pointer-events: none;cursor: default;}
-.navbar-default{margin-top:20px}
+
+.navbar {margin-bottom:0px;border-radius:0px 0px 6px 6px;}
+.navbar .form-control {border:none;}
+.navbar-default {background:#bbb;border:none;box-shadow:none;}
+.navbar-brand {padding:8px 3px 8px 8px}
+.navbar-brand img {border-radius:4px;}
+.navbar-form {margin-left:-10px;}
+#searchbox {border-radius:4px;}
+.mesearch {width:46px; height:46px;}
+.facets {margin-left:62px;}
+.facets .count {color:#99c;}
+
+.panel {border:none;box-shadow:none;border-radius:0px;}
 
 @media (min-width: 300px) {
   #searchbox{width:270px}

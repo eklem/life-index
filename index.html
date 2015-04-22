@@ -24,7 +24,22 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#/about">Norch</a>
+        <a class="navbar-brand" href="#/about"><img src="https://secure.gravatar.com/avatar/344c215281fbce2fd50448e4a3c558d9?s=200&r=pg&d=wavatar" class="mesearch" /></a>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="input-group-lg" ng-controller="instantSearchCtrl">
+            <form method="get">
+              <input type="text"
+                     class="form-control"
+                     placeholder="Search"
+                     id="searchbox"
+                     autofocus="autofocus"
+                    class="typeahead"
+                     ng-model="searchString"
+                     typeahead="suggestion for suggestion in suggestions($viewValue)"
+                     typeahead-on-select="onSelect($item)">
+            </form>
+          </div>
+        </form>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -34,24 +49,7 @@
           <li ng-class="{active:isActive('/docs')}"><a href="#/docs">Documentation</a></li>
         </ul>
       </div>
-    </nav>
-
-    <form class="" role="search">
-      <div ng-controller="instantSearchCtrl">
-        <form method="get">
-          <input type="text"
-                 class="form-control demo-icon icon-search"
-                 placeholder="Search"
-                 id="searchbox"
-                 autofocus="autofocus"
-                 class="typeahead"
-                 ng-model="searchString"
-                 typeahead="suggestion for suggestion in suggestions($viewValue)"
-                 typeahead-on-select="onSelect($item)">
-        </form>
-      </div>
-    </form>
-    
+    </nav>   
     <div id="viewdiv" ng-view></div>
 
     <!-- Inject angular an jquery and other good stuff. -->
