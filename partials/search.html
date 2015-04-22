@@ -1,0 +1,62 @@
+<div ng-controller="searchCtrl">
+
+  <div ng-repeat="(facetname, facet) in norch.facets">
+    <div class="" ng-if="facetname == 'type'">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="{{facety.url}}"
+           ng-repeat="facety in facet" class="btn btn-primary">
+          <i class="demo-icon icon-{{facety.label}}"></i> {{facety.count}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div ng-repeat="(facetname, facet) in norch.facets">
+    <div class="" ng-if="facetname != 'type'">
+        <b style="margin-left:-27px" class="panel-title"><i class="demo-icon icon-{{facetname}}"></i> </b>
+        <div class="btn-group" role="group" aria-label="...">
+          <a href="{{facety.url}}"
+             ng-repeat="facety in facet" class="btn btn-primary btn-xs">{{facety.label}} {{facety.count}}</a>
+        </div>
+    </div>
+  </div>
+
+
+  <div>
+    <h2>
+      {{norch.totalHits}}
+      <small>hits for</small>
+      {{norch.q}}
+      <small>
+        <span ng-if="norch.activeFilters.length"> filtered on 
+          <span ng-repeat="f in norch.activeFilters"> 
+            <a href="{{f.filterURL}}" ng-if="f.filterName == 'type'" class="btn btn-default">
+              <i class="demo-icon icon-{{f.filterValue}}"></i>
+            </a>
+          </span>
+          <span ng-repeat="f in norch.activeFilters"> 
+            <a href="{{f.filterURL}}" ng-if="f.filterName != 'type'" class="btn btn-default">
+              <i class="demo-icon icon-{{f.filterName}}"></i> {{f.filterValue}}
+            </a>
+          </span>
+        </span>
+      </small>
+    </h2>
+    <div infinite-scroll='norch.nextPage()'
+         infinite-scroll-disabled='norch.busy'
+         infinite-scroll-distance='1'>
+      <div ng-repeat='item in norch.items'>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div ng-repeat='(key, value) in item.document'>
+              <b>{{key}}:</b> {{value}}
+            </div>
+<!-- TODO: find the updated way to render the teaser in Angular
+            <span ng-bind-html='item.document.teaser'></span>
+-->
+          </div>
+        </div>
+      </div>
+      <div ng-show='norch.busy'>Loading data...</div>
+    </div>
+  </div>
+</div>
