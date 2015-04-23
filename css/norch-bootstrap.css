@@ -34,7 +34,7 @@ b.panel-title {margin-left:-27px; color:#999;}
 .col-sm-5 {padding:15px;}
 
 .flickr img {width:100%;}
-.gravatar img {width:100%;}
+.gravatar img {width:50%;}
 
 @media (min-width: 300px) {
   #searchbox{width:180px}
