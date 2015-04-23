@@ -47,17 +47,64 @@
     <div infinite-scroll='norch.nextPage()'
          infinite-scroll-disabled='norch.busy'
          infinite-scroll-distance='1'>
-      <div ng-repeat='item in norch.items'>
-        <div class="panel panel-default">
-          <div class="panel-body">
+      <div ng-repeat="item in norch.items">
+        <div class="panel twitter row" ng-if="item.document.type == 'Twitter'">
+          <div class="col-sm-7">
+            <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
+            <h3 ng-if="item.document.text != 'null' && (item.document.teaser == null || item.document.teaser == 'null')"><a href="{{item.document.link}}">{{item.document.text}}</a></h3>
+            <h3 ng-if="item.document.teaser != 'null'"><a href="{{item.document.link}}" ng-bind-html="item.document.teaser"></a></h3>
+            <p ng-if="item.document.tags != null">
+              <span ng-repeat="tag in item.document.tags"><a href="https://twitter.com/search?q=%23{{tag}}&src=typd">#{{tag}}</a>{{$last ? '' : ', '}}</span>
+            </p>
+            <p>{{item.document.datehuman}}</p>
+          </div>
+          <div class="col-sm-5">
+            <p ng-if="item.document.user != null">
+              <span ng-repeat="user in item.document.user"><a href="https://twitter.com/{{user}}">@{{user}}</a>{{$last ? '' : ', '}}</span>
+            </p>
+          </div>
+        </div>
+        <div class="panel row flickr" ng-if="item.document.type == 'Flickr'">
+          <div class="col-sm-7">
+            <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
+            <h3>{{item.document.title}}</h3>
+            <p ng-if="item.document.teaser != 'null'" ng-bind-html="item.document.teaser"></p>
+            <p ng-if="item.document.text != 'null' && item.document.teaser == 'null'">{{item.document.text}}</p>
+            <p ng-if="item.document.tags != null">
+              <span ng-repeat="tag in item.document.tags"><a href="https://www.flickr.com/search/?w=23874626@N06&q=%23{{tag}}">#{{tag}}</a>{{$last ? '' : ', '}}</span>
+            </p>
+          </div>
+          <div class="col-sm-5">
+            <a class="photo" href="{{item.document.url}}"><img src="{{item.document.urlimage}}" /></a>
+          </div>
+        </div>
+        <div class="panel row gmail" ng-if="item.document.type == 'Gmail'">
+          <div class="col-sm-7">
+            <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
+            <h3>{{item.document.title}}</h3>
+            <blockquote ng-bind-html="item.document.teaser">{{item.document.teaser}}</blockquote>
+            <p ng-if="item.document.text != 'null'">{{item.document.text}}</p>
+          </div>
+          <div class="col-sm-5">
+            <a class="gravatar" href="mailto:{{item.document.email}}"><img src="{{item.document.gravatar}}"></a>
+            <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:{{item.document.email}}">{{item.document.email}}</a></p>
+            <p ng-if="item.document.fileurlpublic != 'https://ifttt.com/images/file_not_found.png'"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> <a href="{{item.document.fileurlpublic}}">{{item.document.file}}</a></p>
+            <p>{{item.document.datehuman}}</p>
+          </div>
+        </div>
+
+        
+        <!-- 
+        <div class="panel row">
+          <div class="col-sm-12">
             <div ng-repeat='(key, value) in item.document'>
               <b>{{key}}:</b> {{value}}
             </div>
-<!-- TODO: find the updated way to render the teaser in Angular
-            <span ng-bind-html='item.document.teaser'></span>
--->
           </div>
         </div>
+        -->
+
+
       </div>
       <div ng-show='norch.busy'>Loading data...</div>
     </div>
