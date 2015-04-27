@@ -1,13 +1,18 @@
 {
-  "name": "norch-bootstrap",
-  "version": "0.0.6",
-  "description": "A lighweight bootstrap-angular.js frontend for Norch.js",
+  "name": "life-index",
+  "version": "0.0.1",
+  "description": "Your digital life - searchable. Forked norch-bootstrap. A lighweight bootstrap-angular.js frontend for Norch.js",
   "main": "index.js",
   "keywords": [
+    "life-index",
+    "personal",
     "norch",
     "search",
     "angular"
   ],
-  "author": "Fergus McDowall",
+  "author": [
+    "Espen Klem",
+    "Fergus McDowall"
+  ],
   "license": "MIT"
 }
