@@ -13,6 +13,23 @@ Activate the recipes you want to make searchable
 * [Your Twitter tweets](https://ifttt.com/recipes/283696-lifeindex-searchable-tweets)
 * [Flickr uploads](https://ifttt.com/recipes/283697-lifeindex-searchable-flickr-uploads)
 
+## Google Drive - Spreadsheet column headers
+For each spreadsheet you store to Google Drive you need to manually add a row with column headers. These will be the key in our key/value pair.
+
+### Gmail
+date | email | title | text | file | fileurlprivate | fileurlpublic
+---- | ----- | ----- | ---- | ---- | -------------- | -------------
+[date] | [email address] | [email title] | [body text] | [Filename on first attachment] | [URL to private file] | [URL to public file]
+
+### Twitter tweets
+date | user | text | link
+---- | ---- | ---- | ---- 
+[date] | [username] | [tweet text] | [link to tweet]
+
+### Flickr uploads
+date | dateuploaded | title | text | url | image | urlimage | tags
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- 
+[date] | [date uploaded] | [photo title] | [photo text] | [URL to photo page] | [resizeable image URL] | [full size image URL] | [tags list, comma separated]
 
 # Example
 A quick screenshot on how the search will look:
