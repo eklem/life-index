@@ -13,4 +13,7 @@ Activate the recipes you want to make searchable
 * [Your Twitter tweets](https://ifttt.com/recipes/283696-lifeindex-searchable-tweets)
 * [Flickr uploads](https://ifttt.com/recipes/283697-lifeindex-searchable-flickr-uploads)
 
+
+# Example
+A quick screenshot on how the search will look:
 ![Life-index - An example on personal searh](https://cloud.githubusercontent.com/assets/236656/7343405/8e55cf8a-ecc1-11e4-9906-a410ea108cbf.png)
