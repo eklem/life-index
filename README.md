@@ -6,4 +6,11 @@ Life-Index is a forked version of [Norch-bootstrap](https://github.com/fergiemcd
 
 The data comes from several IFTTT IF-recipes, storing it in several Google Drive Spreadsheets. Life-Indexer pulls this information from Google Drive and index it.
 
+# Setup
+## IFTTT IF-recipes
+Activate the recipes you want to make searchable
+* [Starred email in Gmail](https://ifttt.com/recipes/283693-lifeindex-searchable-gmail)
+* [Your Twitter tweets](https://ifttt.com/recipes/283696-lifeindex-searchable-tweets)
+* [Flickr uploads](https://ifttt.com/recipes/283697-lifeindex-searchable-flickr-uploads)
+
 ![Life-index - An example on personal searh](https://cloud.githubusercontent.com/assets/236656/7343405/8e55cf8a-ecc1-11e4-9906-a410ea108cbf.png)
