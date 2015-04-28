@@ -62,6 +62,9 @@
             <p ng-if="item.document.user != null">
               <span ng-repeat="user in item.document.user"><a href="https://twitter.com/{{user}}">@{{user}}</a>{{$last ? '' : ', '}}</span>
             </p>
+            <p ng-if="item.document.links != null" ng-repeat="link in item.document.links">
+              <a href="{{link}}">{{link}}</span>
+            </p>
           </div>
         </div>
         <div class="panel row flickr" ng-if="item.document.type == 'Flickr'">
