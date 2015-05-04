@@ -1,3 +1,15 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Intro](#)
+- [Setup](#)
+	- [IFTTT IF-recipes](#)
+	- [Google Drive - Spreadsheet column headers](#)
+		- [Gmail](#)
+		- [Twitter tweets](#)
+		- [Flickr uploads](#)
+- [Example](#)
+ 
+
 # Intro
 
 Life-Index is a personal search engine based on [Norch](https://github.com/fergiemcdowall/norch) and [Search-index](https://github.com/fergiemcdowall/search-index), making my digital life searchable. Proof of concept.
