@@ -76,6 +76,6 @@ A quick screenshot on how the search will look:
 ![Life-index - An example on personal searh](https://cloud.githubusercontent.com/assets/236656/7343405/8e55cf8a-ecc1-11e4-9906-a410ea108cbf.png)
 
 # Credits
-* @fergiemcdowall for support and help on `norch`and `search-index`
-* @mewwts for helping me on NodeJS issues
-* @erikperez for creating an indexer for the online version of Outlook: [life-indexer-outlook](https://github.com/erikperez/life-indexer-outlook)
+* [fergiemcdowall](https://github.com/fergiemcdowall) for support and help on `norch`and `search-index`
+* [mewwts](https://github.com/mewwts) for helping me on NodeJS issues
+* [erikperez](https://github.com/erikperez) for creating an indexer for the online version of Outlook: [life-indexer-outlook](https://github.com/erikperez/life-indexer-outlook)
