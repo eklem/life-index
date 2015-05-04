@@ -7,7 +7,11 @@
 		- [Gmail](#)
 		- [Twitter tweets](#)
 		- [Flickr uploads](#)
+	- [Clone repositories](#)
+	- [Install dependencies](#)
+	- [Switch Norch frontend Norch-bootstrap to Life-index](#)
 - [Example](#)
+- [Credits](#)
  
 
 # Intro
@@ -51,7 +55,7 @@ $ git clone git@github.com:eklem/life-indexer.git
 $ git clone git@github.com:eklem/iftt-norch-tools.git
 ```
 
-## install dependencies
+## Install dependencies
 ... todo
 
 ## Switch Norch frontend Norch-bootstrap to Life-index
