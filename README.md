@@ -3,7 +3,7 @@
 - [Intro](#intro)
 - [Setup](#setup)
 	- [IFTTT IF-recipes](#ifttt-if-recipes)
-	- [Google Drive - Spreadsheet column headers](#ifttt-if-recipes)
+	- [Google Drive - Spreadsheet column headers](#google-drive---spreadsheet-column-headers)
 		- [Gmail](#gmail)
 		- [Twitter tweets](#twitter-tweets)
 		- [Flickr uploads](#flickr-uploads)
