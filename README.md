@@ -1,17 +1,17 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Intro](#)
-- [Setup](#)
-	- [IFTTT IF-recipes](#)
-	- [Google Drive - Spreadsheet column headers](#)
-		- [Gmail](#)
-		- [Twitter tweets](#)
-		- [Flickr uploads](#)
-	- [Clone repositories](#)
-	- [Install dependencies](#)
-	- [Switch Norch frontend Norch-bootstrap to Life-index](#)
-- [Example](#)
-- [Credits](#)
+- [Intro](#intro)
+- [Setup](#setup)
+	- [IFTTT IF-recipes](#ifttt-if-recipes)
+	- [Google Drive - Spreadsheet column headers](#ifttt-if-recipes)
+		- [Gmail](#gmail)
+		- [Twitter tweets](#twitter-tweets)
+		- [Flickr uploads](#flickr-uploads)
+	- [Clone repositories](#clone-repositories)
+	- [Install dependencies](#install-dependencies)
+	- [Switch Norch frontend Norch-bootstrap to Life-index](#switch-norch-frontend-norch-bootstrap-to-life-index)
+- [Example](#examples)
+- [Credits](#credits)
 
 # Intro
 
