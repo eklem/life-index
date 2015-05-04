@@ -12,7 +12,6 @@
 	- [Switch Norch frontend Norch-bootstrap to Life-index](#)
 - [Example](#)
 - [Credits](#)
- 
 
 # Intro
 
