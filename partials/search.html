@@ -48,6 +48,8 @@
          infinite-scroll-disabled='norch.busy'
          infinite-scroll-distance='1'>
       <div ng-repeat="item in norch.items">
+
+        <!-- Twitter -->
         <div class="panel twitter row" ng-if="item.document.type == 'Twitter'">
           <div class="col-sm-7">
             <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
@@ -63,10 +65,12 @@
               <span ng-repeat="user in item.document.user"><a href="https://twitter.com/{{user}}">@{{user}}</a>{{$last ? '' : ', '}}</span>
             </p>
             <p ng-if="item.document.links != null" ng-repeat="link in item.document.links">
-              <a href="{{link}}">{{link}}</span>
+              <a href="{{link}}">{{link}}</a>
             </p>
           </div>
         </div>
+
+        <!-- Flickr -->
         <div class="panel row flickr" ng-if="item.document.type == 'Flickr'">
           <div class="col-sm-7">
             <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
@@ -81,6 +85,8 @@
             <a class="photo" href="{{item.document.url}}"><img src="{{item.document.urlimage}}" /></a>
           </div>
         </div>
+
+        <!-- Gmail -->
         <div class="panel row gmail" ng-if="item.document.type == 'Gmail'">
           <div class="col-sm-7">
             <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
@@ -96,16 +102,14 @@
           </div>
         </div>
 
-        
-        <!-- 
-        <div class="panel row">
+        <!-- Debug new sources -->
+        <div class="panel row generic" ng-if="item.document.type != 'Twitter' && item.document.type != 'Flickr' && item.document.type != 'Gmail'">
           <div class="col-sm-12">
             <div ng-repeat='(key, value) in item.document'>
               <b>{{key}}:</b> {{value}}
             </div>
           </div>
         </div>
-        -->
 
 
       </div>
