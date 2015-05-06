@@ -1,17 +1,19 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Intro](#intro)
-- [Setup](#setup)
-	- [IFTTT IF-recipes](#ifttt-if-recipes)
-	- [Google Drive - Spreadsheet column headers](#google-drive---spreadsheet-column-headers)
-		- [Gmail](#gmail)
-		- [Twitter tweets](#twitter-tweets)
-		- [Flickr uploads](#flickr-uploads)
-	- [Clone repositories](#clone-repositories)
-	- [Install dependencies](#install-dependencies)
-	- [Switch Norch frontend Norch-bootstrap to Life-index](#switch-norch-frontend-norch-bootstrap-to-life-index)
-- [Example](#examples)
-- [Credits](#credits)
+- [Intro](#)
+	- [Clone repositories](#)
+	- [Install dependencies](#)
+- [Setup](#)
+	- [IFTTT IF-recipes](#)
+	- [Google Drive - Spreadsheet column headers](#)
+		- [Gmail](#)
+		- [Twitter tweets](#)
+		- [Flickr uploads](#)
+	- [Switch frontend](#)
+- [Index content](#)
+- [Run](#)
+- [Example](#)
+- [Credits](#)
 
 # Intro
 
@@ -39,8 +41,8 @@ Activate the recipes you want to make searchable
 * [Your Twitter tweets](https://ifttt.com/recipes/283696-lifeindex-searchable-tweets)
 * [Flickr uploads](https://ifttt.com/recipes/283697-lifeindex-searchable-flickr-uploads)
 
-## Google Drive - Spreadsheet column headers
-For each spreadsheet you store to Google Drive you need to manually add a row with column headers. These will be the key in our key/value pair.
+## Spreadsheet column headers
+The IFTTT IF recipes stores content in spreadshees on Google Drive. Each recipe gets it's own spreadsheet, and you need to manually add a row with column headers. These will be the key in our key/value pair when we use the Life-indexer to pull JSON from those spreadsheets.
 
 ### Gmail
 date | email | title | text | file | fileurlprivate | fileurlpublic
@@ -57,7 +59,7 @@ date | dateuploaded | title | text | url | image | urlimage | tags
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- 
 [date] | [date uploaded] | [photo title] | [photo text] | [URL to photo page] | [resizeable image URL] | [full size image URL] | [tags list, comma separated]
 
-## Switch Norch frontend Norch-bootstrap to Life-index
+## Switch frontend
 Life-index is based on Norch. Norch has a generic frontend called Norch-bootstrap. You'll have to switch the frontend from Norch-bootstrap to Life-index. It's done by changing one line of code in [`node_modules/norch/lib/norch.js`](https://github.com/fergiemcdowall/norch/blob/master/lib/norch.js#L34)
 from:
 ```javascript
