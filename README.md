@@ -1,19 +1,19 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Intro](#)
-	- [Clone repositories](#)
-	- [Install dependencies](#)
-- [Setup](#)
-	- [IFTTT IF-recipes](#)
-	- [Google Drive - Spreadsheet column headers](#)
-		- [Gmail](#)
-		- [Twitter tweets](#)
-		- [Flickr uploads](#)
-	- [Switch frontend](#)
-- [Index content](#)
-- [Run](#)
-- [Example](#)
-- [Credits](#)
+- [Intro](#intro)
+	- [Clone repositories](#clone-repositories)
+	- [Install dependencies](#install-dependencies)
+- [Setup](#setup)
+	- [IFTTT IF-recipes](#ifttt-if-recipes)
+	- [Spreadsheet column headers](#spreadsheet-column-headers)
+		- [Gmail](#gmail)
+		- [Twitter tweets](#twitter-tweets)
+		- [Flickr uploads](#flickr-uploads)
+	- [Switch frontend](#switch-frontend)
+- [Index content](#index-content)
+- [Run](#run)
+- [Example](#example)
+- [Credits](#credits)
 
 # Intro
 
