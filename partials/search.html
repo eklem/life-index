@@ -83,7 +83,7 @@
             <p>{{item.document.datehuman}}</p>
           </div>
           <div class="col-sm-5">
-            <a class="photo" href="{{item.document.url}}"><img src="{{item.document.urlimage}}" /></a>
+            <a class="photo" href="{{item.document.url}}"><img ng-src="{{item.document.urlimage}}" /></a>
           </div>
         </div>
 
@@ -96,7 +96,7 @@
             <p ng-if="item.document.text != 'null'" ng-bind-html="item.document.text"></p>
           </div>
           <div class="col-sm-5">
-            <a class="gravatar" href="mailto:{{item.document.email}}"><img src="{{item.document.gravatar}}"></a>
+            <a class="gravatar" href="mailto:{{item.document.email}}"><img ng-src="{{item.document.gravatar}}"></a>
             <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:{{item.document.email}}">{{item.document.email}}</a></p>
             <p ng-if="item.document.fileurlpublic != 'https://ifttt.com/images/file_not_found.png'">
               <span class="glyphicon glyphicon-file" aria-hidden="true"></span> <a href="{{item.document.fileurlpublic}}">{{item.document.file}}</a>
