@@ -94,6 +94,7 @@
             <h3>{{item.document.title}}</h3>
             <blockquote ng-if="item.document.teaser != 'null'" ng-bind-html="item.document.teaser">{{item.document.teaser}}</blockquote>
             <p ng-if="item.document.text != 'null'" ng-bind-html="item.document.text"></p>
+            <span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span>
           </div>
           <div class="col-sm-5">
             <a class="gravatar" href="mailto:{{item.document.email}}"><img ng-src="{{item.document.gravatar}}"></a>
