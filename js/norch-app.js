@@ -89,7 +89,7 @@ angular
           $location.search()['filter[' + possibleFilters[i] + '][]'];
         }
       }
-      url += '&teaser=text';
+      url += '&teaser=teasertext';
       $http.get(url).success(function(data) {
         var filterQueryString = '';
         var navs = {};
