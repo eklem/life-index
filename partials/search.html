@@ -106,8 +106,23 @@
           </div>
         </div>
 
+        <!-- GitHub -->
+        <div class="panel row github" ng-if="item.document.type == 'GitHub'">
+          <div class="col-sm-7">
+            <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
+            <h3>{{item.document.title}}</h3>
+            <blockquote ng-if="item.document.teaser != 'null'" ng-bind-html="item.document.teaser">{{item.document.teaser}}</blockquote>
+            <p ng-if="item.document.text != 'null'" ng-bind-html="item.document.text"></p>
+            <span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span>
+          </div>
+          <div class="col-sm-5">
+            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person">{{user}}</a>
+            <p>{{item.document.datehuman}}</p>
+          </div>
+        </div>
+
         <!-- Debug new sources -->
-        <div class="panel row generic" ng-if="item.document.type != 'Twitter' && item.document.type != 'Flickr' && item.document.type != 'Gmail'">
+        <div class="panel row generic" ng-if="item.document.type != 'Twitter' && item.document.type != 'Flickr' && item.document.type != 'Gmail' && item.document.type != 'GitHub'">
           <div class="col-sm-12">
             <div ng-repeat='(key, value) in item.document'>
               <b>{{key}}:</b> {{value}}
@@ -117,7 +132,7 @@
 
 
       </div>
-      <div ng-show='norch.busy'>Loading data...</div>
+      <h3 ng-show='norch.busy'><span class="demo-icon icon-wait animate-spin"></span>Loading data...<h3>
     </div>
   </div>
 </div>
