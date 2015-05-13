@@ -31,6 +31,8 @@ b.panel-title {margin-left:-27px; color:#999;}
 .panel {border:none;box-shadow:none;border-radius:0px;}
 .type {position:absolute;display:block;z-index:10;left:-32px;top:0px;width:32px;height:32px;padding:6px;background:#dddddd;}
 
+.panel.row img {max-width: 100%;}
+
 .col-sm-5 {padding:15px;}
 
 .flickr img {width:100%;}
