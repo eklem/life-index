@@ -5,7 +5,7 @@
       <div class="" ng-if="facetname == 'type'">
         <div class="btn-group" role="group" aria-label="...">
           <a href="{{facety.url}}"
-             ng-repeat="facety in facet" class="btn btn-primary">
+             ng-repeat="facety in facet" class="btn btn-primary btn-lg">
             <i class="demo-icon icon-{{facety.label}}"></i> <span class="count">{{facety.count}}</span>
           </a>
         </div>
@@ -95,11 +95,11 @@
             <h3>{{item.document.title}}</h3>
             <blockquote ng-if="item.document.teaser != 'null'" ng-bind-html="item.document.teaser">{{item.document.teaser}}</blockquote>
             <p ng-if="item.document.text != 'null'" ng-bind-html="item.document.text"></p>
-            <span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span>
+            <p><span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span></p>
           </div>
           <div class="col-sm-5">
             <a class="gravatar" href="mailto:{{item.document.email}}"><img ng-src="{{item.document.gravatar}}"></a>
-            <p><a href="mailto:{{item.document.email}}"><span class="demo-icon icon-person"></span> {{item.document.email}}</a></p>
+            <p><a ng-href="mailto:{{item.document.email}}"><span class="demo-icon icon-person"></span> {{item.document.email}}</a></p>
             <p ng-if="item.document.fileurlpublic != 'https://ifttt.com/images/file_not_found.png'">
               <span class="glyphicon glyphicon-file" aria-hidden="true"></span> <a href="{{item.document.fileurlpublic}}">{{item.document.file}}</a>
             </p>
@@ -111,12 +111,13 @@
         <div class="panel row github" ng-if="item.document.type == 'GitHub'">
           <div class="col-sm-7">
             <div class="type" ng-repeat="type in item.document.type"><i class="demo-icon icon-{{type}}"></i></div>
-            <h3>{{item.document.title}}</h3>
+            <h3><a href="{{item.document.url}}">{{item.document.title}}</a></h3>
             <blockquote ng-if="item.document.teaser != 'null'" ng-bind-html="item.document.teaser">{{item.document.teaser}}</blockquote>
             <p ng-if="item.document.text != 'null'" ng-bind-html="item.document.text"></p>
-            <span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span>
+            <p><span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span></p>
           </div>
           <div class="col-sm-5">
+            <h4><a href="https://github.com/{{item.document.user[0]}}/{{item.document.repository}}">{{item.document.repository}}</a>  - <span class="{{item.document.issuetype}}">{{item.document.issuetype}}</span></h4>
             <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
             <p>{{item.document.datehuman}}</p>
           </div>
