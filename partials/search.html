@@ -61,8 +61,8 @@
             <p>{{item.document.datehuman}}</p>
           </div>
           <div class="col-sm-5">
-            <p ng-if="item.document.user != null">
-              <span ng-repeat="user in item.document.user"><a href="https://twitter.com/{{user}}">@{{user}}</a>{{$last ? '' : ', '}}</span>
+            <p ng-if="item.document.user != null" ng-repeat="user in item.document.user">
+              <a href="https://twitter.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
             </p>
             <p ng-if="item.document.links != null" ng-repeat="link in item.document.links">
               <a href="{{link}}">{{link}}</a>
@@ -84,6 +84,7 @@
           </div>
           <div class="col-sm-5">
             <a class="photo" href="{{item.document.url}}"><img ng-src="{{item.document.urlimage}}" /></a>
+            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
           </div>
         </div>
 
@@ -98,7 +99,7 @@
           </div>
           <div class="col-sm-5">
             <a class="gravatar" href="mailto:{{item.document.email}}"><img ng-src="{{item.document.gravatar}}"></a>
-            <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:{{item.document.email}}">{{item.document.email}}</a></p>
+            <p><a href="mailto:{{item.document.email}}"><span class="demo-icon icon-person"></span> {{item.document.email}}</a></p>
             <p ng-if="item.document.fileurlpublic != 'https://ifttt.com/images/file_not_found.png'">
               <span class="glyphicon glyphicon-file" aria-hidden="true"></span> <a href="{{item.document.fileurlpublic}}">{{item.document.file}}</a>
             </p>
@@ -116,7 +117,7 @@
             <span ng-repeat="tag in item.document.tags">#{{tag}}{{$last ? '' : ', '}}</span>
           </div>
           <div class="col-sm-5">
-            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person">{{user}}</a>
+            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
             <p>{{item.document.datehuman}}</p>
           </div>
         </div>
