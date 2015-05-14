@@ -1,5 +1,5 @@
 html {overflow: -moz-scrollbars-vertical; overflow: scroll;}
-body {background:#ccc;}
+body {background:#ccc; font-size:1.8em;}
 h2 {color:#000;}
 h3 a {color:#000;}
 
@@ -29,7 +29,7 @@ b.panel-title {margin-left:-27px; color:#999;}
 .facets, .results {margin-left:54px;box-sizing:border-box;}
 .facets .count {color:#99c;}
 .panel {border:none;box-shadow:none;border-radius:0px;}
-.type {position:absolute;display:block;z-index:10;left:-32px;top:0px;width:32px;height:32px;padding:6px;background:#dddddd;}
+.type {font-size:1.3em;position:absolute;display:block;z-index:10;left:-36px;top:0px;width:36px;height:36px;padding:2px;background:#dddddd;}
 
 .panel.row img {max-width: 100%;}
 
