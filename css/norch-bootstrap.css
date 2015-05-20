@@ -5,7 +5,7 @@ h3 a {color:#000;}
 
 blockquote {border-left: 5px solid #ccc;}
 
-b.panel-title {margin-left:-27px; color:#999;}
+b.panel-title {margin-left:-27px; color:#666;}
 #tab-content-id {margin-top: 30px}
 
 
@@ -28,8 +28,11 @@ b.panel-title {margin-left:-27px; color:#999;}
 .row {margin-right:0px;margin-left:0px;}
 .facets, .results {margin-left:54px;box-sizing:border-box;}
 .facets .count {color:#99c;}
+.facets .btn-group-vertical > .btn, .btn-group > .btn { float:none;}
+.facets .btn-group, .btn-group-vertical {margin-bottom:7px;}
+
 .panel {border:none;box-shadow:none;border-radius:0px;}
-.type {font-size:1.3em;position:absolute;display:block;z-index:10;left:-36px;top:0px;width:36px;height:36px;padding:2px;background:#dddddd;}
+.type {font-size:1.9em;position:absolute;display:block;z-index:10;left:-50px;top:0px;width:50px;height:50px;padding:0px;color:#aaa;}
 
 .panel.row img {max-width: 100%;}
 

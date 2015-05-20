@@ -16,7 +16,7 @@
           <b class="panel-title"><i class="demo-icon icon-{{facetname}}"></i> </b>
           <div class="btn-group" role="group" aria-label="...">
             <a href="{{facety.url}}"
-               ng-repeat="facety in facet" class="btn btn-primary btn-xs">{{facety.label}} <span class="count">{{facety.count}}</span>
+               ng-repeat="facety in facet" class="btn btn-primary btn-sm">{{facety.label}} <span class="count">{{facety.count}}</span>
             </a>
           </div>
       </div>
@@ -84,7 +84,7 @@
           </div>
           <div class="col-sm-5">
             <a class="photo" href="{{item.document.url}}"><img ng-src="{{item.document.urlimage}}" /></a>
-            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
+            <a ng-repeat="user in item.document.user" ng-href="https://flickr.com/photos/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
           </div>
         </div>
 
@@ -118,7 +118,7 @@
           </div>
           <div class="col-sm-5">
             <h4><a href="https://github.com/{{item.document.user[0]}}/{{item.document.repository}}">{{item.document.repository}}</a>  - <span class="{{item.document.issuetype}}">{{item.document.issuetype}}</span></h4>
-            <a ng-repeat="user in item.document.user" ng-href="http://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
+            <a ng-repeat="user in item.document.user" ng-href="https://github.com/{{user}}"><span class="demo-icon icon-person"></span> {{user}}</a>
             <p>{{item.document.datehuman}}</p>
           </div>
         </div>
