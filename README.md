@@ -40,6 +40,7 @@ Activate the recipes you want to make searchable
 * [Starred email in Gmail](https://ifttt.com/recipes/283693-lifeindex-searchable-gmail)
 * [Your Twitter tweets](https://ifttt.com/recipes/283696-lifeindex-searchable-tweets)
 * [Flickr uploads](https://ifttt.com/recipes/283697-lifeindex-searchable-flickr-uploads)
+* [GitHub issues](https://ifttt.com/recipes/292809-lifeindex-searchable-github-issues)
 
 ## Spreadsheet column headers
 The IFTTT IF recipes stores content in spreadshees on Google Drive. Each recipe gets it's own spreadsheet, and you need to manually add a row with column headers. These will be the key in our key/value pair when we use the Life-indexer to pull JSON from those spreadsheets.
@@ -58,6 +59,11 @@ date | user | text | link
 date | dateuploaded | title | text | url | image | urlimage | tags
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- 
 [date] | [date uploaded] | [photo title] | [photo text] | [URL to photo page] | [resizeable image URL] | [full size image URL] | [tags list, comma separated]
+
+### GitHub issues
+date | repository | title | text | issue-type | url | user | user-img
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- 
+[date] | [repository name] | [issue title] | [issue text] | [issue type] | [url to issue page] | [username] | [user photo]
 
 ## Switch frontend
 Life-index is based on Norch. Norch has a generic frontend called Norch-bootstrap. You'll have to switch the frontend from Norch-bootstrap to Life-index. It's done by changing one line of code in [`node_modules/norch/lib/norch.js`](https://github.com/fergiemcdowall/norch/blob/master/lib/norch.js#L34)
