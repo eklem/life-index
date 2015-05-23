@@ -4,7 +4,7 @@
    <Description>Life Index - Your digital life searchable</Description>
    <Tags>search</Tags>
    <Contact>espen.klem@gmail.com</Contact>
-   <Url type="application/json"
+   <Url type="application/x-suggestions+json"
       rel="suggestions" method="GET"
       template="http://localhost:3030/matcher?beginsWith={searchTerms}" />
    <Url type="text/html" method="GET" 
