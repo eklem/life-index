@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-   <ShortName>Personal Search</ShortName>
-   <Description>Life Index - Your digital life searchable</Description>
+   <ShortName>Life Index</ShortName>
+   <Description>Your digital life searchable</Description>
    <Tags>search</Tags>
    <Contact>espen.klem@gmail.com</Contact>
+   <Image height="16" width="16" type="image/x-icon">http://localhost:3030/images/favicon.ico</Image>
+   <Image height="64" width="64" type="image/png">http://localhost:3030/images/favicon.png</Image>
    <Url type="application/x-suggestions+json"
       rel="suggestions" method="GET"
-      template="http://localhost:3030/matcher?beginsWith={searchTerms}" />
+      template="http://localhost:3030/opensearchsuggests?beginsWith={searchTerms}" />
    <Url type="text/html" method="GET" 
         template="http://localhost:3030/#/search?q={searchTerms}&amp;facets=user,type,tags"/>
  </OpenSearchDescription>
