@@ -37,6 +37,7 @@ b.panel-title {margin-left:-27px; color:#666;}
 .panel.row img {max-width: 100%;}
 
 .col-sm-5 {padding:15px;}
+.row .col-sm-5, .row .col-sm-7, .row .col-sm-12 {overflow-x:hidden;}
 
 .flickr img {width:100%;}
 .gravatar img {width:50%;}
