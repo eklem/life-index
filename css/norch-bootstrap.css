@@ -25,7 +25,7 @@ b.panel-title {margin-left:-27px; color:#666;}
 	border:none;
 }
 
-.row {margin-right:0px;margin-left:0px;}
+.row {margin-right:0px;margin-left:0px;position:relative; }
 .facets, .results {margin-left:54px;box-sizing:border-box;}
 .facets .count {color:#99c;}
 .facets .btn-group-vertical > .btn, .btn-group > .btn { float:none;}
